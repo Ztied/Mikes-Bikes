@@ -17,7 +17,7 @@ return (
         {dirtBikes.map(dirtBikeObj => {
             return <div className="bike" key={dirtBikeObj.id}> <Link to={`/bikes/${dirtBikeObj.id}`}><img className="bike-img" src={dirtBikeObj.img}/> </Link>
                 <div className="bike-content"><h2>{dirtBikeObj.make}: {dirtBikeObj.model}</h2>
-                <p></p>
+                <p>Mods: {dirtBikeObj.mods}</p>
                 <h4>Made by: {dirtBikeObj.user.fullName}</h4>
             </div>
             </div>

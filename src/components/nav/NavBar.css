@@ -1,10 +1,11 @@
 .navbar {
     display: flex;
     flex-wrap: nowrap;
-    background-color: rgb(252, 245, 185);
+    background-color: rgba(127, 111, 102, 1);
     margin: 0;
     width: auto;
     padding: 0.5rem;
+    box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.77);
   }
 
   .navbar-item {
@@ -27,8 +28,9 @@
   }
 
   .navbar-link:hover {
-    color: blue;
-    background-color: aquamarine;
     border-radius: 0.5rem;
     padding: 0.2rem;
+    color: #ffffff;
+background-color: #2323234b;
+text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #4aff1800, 0 0 30px #4aff1800, 0 0 40px #4aff1800, 0 0 55px #4aff1800, 0 0 75px #49ff18
   } 

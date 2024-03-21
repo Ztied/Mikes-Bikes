@@ -30,14 +30,18 @@ export const MyBike = ({currentUser}) => {
         })
     }
 
+    const handleProfile = () => {
+        navigate('/myBikes/profile')
+    }
+
     return( <section>
-    <div className="bikes"> <button className="btn-create" onClick={handleCreate}>Create</button>
+    <div className="bikes"> <button className="btn-create" onClick={handleCreate}>Create</button> <button className="btn-create" onClick={handleProfile}>Profile</button>
        {myBike.map(bikeObj => {
         return <div key={bikeObj.id} className="bike"> <Link to={`/bikes/${bikeObj.id}`}><img className="bike-img" src={bikeObj.img}/> </Link>
-        <div className="bike-content"><h2>{bikeObj.make}: {bikeObj.model}</h2>
+        <div className="bike-content "><h2>{bikeObj.make}: {bikeObj.model}</h2>
         <p>Mods: {bikeObj.mods}</p>
-        <h4>Made By: {bikeObj.user?.fullName} <button onClick={() => handleEdit(bikeObj.id)}>Edit</button>
-        <button onClick={() => handleDelete(bikeObj.id)}>Delete</button></h4>
+        <h4>Made By: {bikeObj.user?.fullName} <div className="btn-pad"> <button className="btn" onClick={() => handleEdit(bikeObj.id)}>Edit</button>
+        <button className="btn-delete" onClick={() => handleDelete(bikeObj.id)}>Delete</button> </div></h4>
         
         </div>
         

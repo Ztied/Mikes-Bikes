@@ -145,7 +145,7 @@ export const BikeCreate = ({currentUser}) => {
       </fieldset>
       <fieldset>
         <div className="form-group">
-            <button className="form-btn" onClick={handlePost}>Create Bike</button>
+            <button className="form-btn float-on-hover" onClick={handlePost}>Create Bike</button>
         </div>
       </fieldset>
       

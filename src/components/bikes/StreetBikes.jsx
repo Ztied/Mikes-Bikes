@@ -15,8 +15,9 @@ export const StreetBikeList = () => {
     return (
         <div className="bikes">
             {streetBikes.map(bikeObj => {
-                return <div className="bike" key={bikeObj.id}> <Link to={`/myBikes/${bikeObj.id}`}><img className="bike-img" src={bikeObj.img}/> </Link>
+                return <div className="bike" key={bikeObj.id}> <Link to={`/bikes/${bikeObj.id}`}><img className="bike-img" src={bikeObj.img}/> </Link>
                     <div className="bike-content"><h2>{bikeObj.make}: {bikeObj.model}</h2>
+                    <p>Mods: {bikeObj.mods}</p>
                     <h4>Made By: {bikeObj.user.fullName}</h4>
                     </div>
                 </div>

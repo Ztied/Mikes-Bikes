@@ -10,6 +10,7 @@ import { useEffect, useState } from "react"
 import { BikeEdit } from "../components/forms/BikeEdit"
 import { BikeCreate } from "../components/forms/BikeCreate"
 import { CruiserBikes } from "../components/bikes/CruiserBikes"
+import { BikeProfile } from "../components/forms/BikeProfile"
 
 export const ApplicationView = () => {
   const [currentUser, setCurrentUser] = useState({})
@@ -48,6 +49,7 @@ export const ApplicationView = () => {
                 <Route path="myBikes" >
                     <Route index element={<MyBike currentUser={currentUser}/>}/>
                     <Route path=":bikeId" element={<BikeEdit/>}/>
+                    <Route path="profile" element={<BikeProfile currentUser={currentUser}/>}/>
                     <Route path="create" element={<BikeCreate currentUser={currentUser}/>}/>
                 </Route>
             </Route>

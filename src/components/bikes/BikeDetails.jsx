@@ -16,7 +16,7 @@ export const BikeDetails = () => {
 
     return <section>
         <div className="bikes-details">
-           <div className="bike-details"><img className="bike-imgDetails" src={bike.img}/>
+           <div className="bike-details"><div className="img-padding"><img className="bike-imgDetails" src={bike.img}/></div>
            <div className="bike-content"><h2>{bike.make}: {bike.model}</h2>
            <p>Information: {bike.info}</p>
            <p>Mods: {bike.mods}</p>
